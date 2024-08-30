@@ -79,6 +79,9 @@ section {
 .hero-content {
     z-index: 1;
 }
+.hero-content h1{
+    color: #FFD700;
+}
 
 #hero::before {
     content: '';
