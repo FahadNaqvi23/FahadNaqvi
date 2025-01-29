@@ -41,3 +41,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     typingEffect();
 });
+
+// Animate skill bars on scroll
+const skillLevels = document.querySelectorAll('.skill-level');
+
+const animateSkillBars = () => {
+    skillLevels.forEach(level => {
+        const width = level.getAttribute('data-level');
+        if (level.getBoundingClientRect().top < window.innerHeight) {
+            level.style.width = `${width}%`;
+        }
+    });
+};
+
+window.addEventListener('scroll', animateSkillBars);
+window.addEventListener('load', animateSkillBars);
